@@ -8,11 +8,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+    font-family: 'Junicode';
+    src: url('Junicode.ttf') format('ttf'
+    )}
         body {
             border-radius: 10px;
             font-family: Libre Franklin, sans-serif;
             background: linear-gradient(90deg, rgba(59,59,59,1) 0%, rgba(215,215,215,1) 25%, rgba(59,59,59,1) 50%, rgba(215,215,215,1) 75%, rgba(59,59,59,1) 100%);
             box-sizing: border-box;
+        }
+
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+            font-stretch: condensed;
+            /* font-style: italic; */
+            font-size: 9rem;
+            background: linear-gradient(0deg, #d70000 0%, rgba(215,215,215,1) 46%, rgba(206,255,171,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(1mm 0mm 0mm rgba(0, 0, 0, 0.7));
+            
+        }
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+            font-stretch: condensed;
+            font-size: 5rem
+        }
+        h3{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+            /* font-style: italic; */
+            font-size: 3rem;
+        }
+        h4{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+            /* font-style: italic; */
+            font-size: 2rem;
         }
         .tre{
             position:fixed;
@@ -81,32 +116,68 @@
             width: 80%;
         }
         .section_01{
-            height: 150vh;
+          padding-bottom: 30vh;
+          /* margin: 20%;  */
         }
         .logo_big{
             width: 50%;
         }
-
+        .ap_portrait{
+            width: 50%;
+        }
+        .caption{
+            padding: 0 20vh;
+            color: navy;
+        }
+        .ap_bio_h4{
+            margin: 5vh 20vh 0vh 20vh;
+            text-align: left;
+        }
+        .ap_bio{
+            margin: 5vh 20vh 0vh 20vh;
+            text-align: left;
+            line-height: 1.8em;
+            font-size: 1.2em;
+        }
+        .ap_date{
+            text-align: right;
+            font-weight: bold;
+            margin-right: 5vw;
+            margin-top: -10vh;
+            /* filter:drop-shadow( 0 0 0.2mm white); */
+        }
+        .ap_img_cont{
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .ap_img{
+            height: 50vh;
+            padding: 20px;
+           
+        }
+      
         footer {
+            box-sizing: border-box;
             background: linear-gradient(0deg, #d70000 0%, rgba(215,215,215,1) 46%, rgba(206,255,171,1) 100%);
             color: rgb(28, 28, 28);
-            font-size: small;
+            font-size: 1rem;
             border-radius: 10px 10px 0 0;
             text-align: left;
-            padding: auto;
             position: relative;
             bottom: 0;
             width: 100%;
-            padding: 2rem;
-            box-sizing: border-box;
+            padding: 5rem;
             filter: drop-shadow(0 -3mm 5mm rgb(0, 0, 0,0.7));
         }
         .footer_cont{
             display:flex;
             gap: 2rem;
+            width: 100%;
         }
         .footer_col_l .footer_col_r{
             display:flex;
+            width: 100%;
         }
         .bottom{
             margin:0px;
@@ -134,7 +205,7 @@
 <img class="tre" src="images/tre.png">
 <main>
     <header>
-        <img src="images/airhue_icon_01@4x.png" alt="Art Organization Logo" class="logo">
+        <a href="index.html"><img src="images/airhue_icon_01@4x.png" alt="AirHue Logo" class="logo"></a>
         <button class="menu-btn" onclick="toggleMenu()">Menu</button>
         <nav id="nav-menu">
             <a href="#about">About Us</a></li>
