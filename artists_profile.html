@@ -8,11 +8,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+    font-family: 'Junicode';
+    src: url('Junicode.ttf') format('ttf'
+    )}
         body {
             border-radius: 10px;
             font-family: Libre Franklin, sans-serif;
             background: linear-gradient(90deg, rgba(59,59,59,1) 0%, rgba(215,215,215,1) 25%, rgba(59,59,59,1) 50%, rgba(215,215,215,1) 75%, rgba(59,59,59,1) 100%);
             box-sizing: border-box;
+        }
+
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+            font-stretch: condensed;
+            /* font-style: italic; */
+            font-size: 9rem;
+            background: linear-gradient(0deg, #d70000 0%, rgba(215,215,215,1) 46%, rgba(206,255,171,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(1mm 0mm 0mm rgba(0, 0, 0, 0.7));
+            
+        }
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+            font-stretch: condensed;
+            font-size: 5rem
+        }
+        h3{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+            /* font-style: italic; */
+            font-size: 3rem;
+        }
+        h4{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 100;
+            /* font-style: italic; */
+            font-size: 2rem;
         }
         .tre{
             position:fixed;
@@ -81,32 +116,68 @@
             width: 80%;
         }
         .section_01{
-            height: 150vh;
+          padding-bottom: 30vh;
+          /* margin: 20%;  */
         }
         .logo_big{
             width: 50%;
         }
-
+        .ap_portrait{
+            width: 50%;
+        }
+        .caption{
+            padding: 0 20vh;
+            color: navy;
+        }
+        .ap_bio_h4{
+            margin: 5vh 20vh 0vh 20vh;
+            text-align: left;
+        }
+        .ap_bio{
+            margin: 5vh 20vh 0vh 20vh;
+            text-align: left;
+            line-height: 1.8em;
+            font-size: 1.2em;
+        }
+        .ap_date{
+            text-align: right;
+            font-weight: bold;
+            margin-right: 5vw;
+            margin-top: -10vh;
+            /* filter:drop-shadow( 0 0 0.2mm white); */
+        }
+        .ap_img_cont{
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .ap_img{
+            height: 50vh;
+            padding: 20px;
+           
+        }
+      
         footer {
+            box-sizing: border-box;
             background: linear-gradient(0deg, #d70000 0%, rgba(215,215,215,1) 46%, rgba(206,255,171,1) 100%);
             color: rgb(28, 28, 28);
-            font-size: small;
+            font-size: 1rem;
             border-radius: 10px 10px 0 0;
             text-align: left;
-            padding: auto;
             position: relative;
             bottom: 0;
             width: 100%;
-            padding: 2rem;
-            box-sizing: border-box;
+            padding: 5rem;
             filter: drop-shadow(0 -3mm 5mm rgb(0, 0, 0,0.7));
         }
         .footer_cont{
             display:flex;
             gap: 2rem;
+            width: 100%;
         }
         .footer_col_l .footer_col_r{
             display:flex;
+            width: 100%;
         }
         .bottom{
             margin:0px;
@@ -137,22 +208,43 @@
         <img src="images/airhue_icon_01@4x.png" alt="Art Organization Logo" class="logo">
         <button class="menu-btn" onclick="toggleMenu()">Menu</button>
         <nav id="nav-menu">
-            <a href="#about">About Us</a></li>
-            <a href="#events">What's On</a></li>
-            <a href="artists_profile.html">Artist Profiles</a></li>
-            <a href="#contact">Donation</a></li>
-            <a href="#contact">VN</a></li>
-            <a href="#contact">ENG</a></li>
-    </nav>
+        <a href="#about">About Us</a></li>
+        <a href="#events">What's On</a></li>
+        <a href="#gallery">Artist Profiles</a></li>
+        <a href="#contact">Donation</a></li>
+        <a href="#contact">VN</a></li>
+        <a href="#contact">ENG</a></li>
+</nav>
     </header>
     <div class="bottom">
         
        </div>
     <div class="container">
         <div class="section_01">
-
-        <img class="logo_big" src="images/airhue_logo_gr01@4x.png">
+            <p class="ap_date">10/04/2025</p>
+            <h1>Anh Dao Ha</h1>
+            <img class="ap_portrait" src="images/artists_profile/05.jpg">
+            <p class="caption"> From left: Men’s formal overkimono (haori) jacket with dragon and tiger facing each other, 1920–40. Black plain weave silk ; plain weave silk lining, hand-painted in ink. 91 x  129 x 48 cm. </p>
+            <h4 class="ap_bio_h4">Workshop</h4>
+            <p class="ap_bio">
+                “What an amazing thing it is that objects made for use in real life should possess a beauty that transcends reality. Yet in the end, to create a good pattern is to grasp an object’s real nature (…) a pattern shows us the life of things.” Soetsu Yanagi, The Beauty of Everyday Things, Penguin Random House, 2018.</p>
+                <h4 class="ap_bio_h4">Process</h4>
+                <p class="ap_bio">
+                    Reveal, do not display, suggest without disclosing. These are the principles behind Japan’s thousands-of-years-old culture, which is still woven from a balance, in a perpetual state of becoming, between solids and voids and a sense of harmony.
+                </p>
+                <div class="ap_img_cont">
+                    <img class="ap_img" src="images/artists_profile/01.jpg">
+                    <img class="ap_img" src="images/artists_profile/02.jpg">
+                    <img class="ap_img" src="images/artists_profile/03.jpg">
+                </div>
+                <h4 class="ap_bio_h4">Philosophy</h4>
+                <p class="ap_bio">
+                    The exhibition at MAO offers a unique glimpse into Japanese material culture through about 50 haori and juban—the garments worn over and under men’s kimonos, respectively—and a few pieces of traditional children’s clothing from the Manavello collection, in dialogue with installations by contemporary artists, including Kimsooja, Royce Ng, Yasujirō Ozu, Tobias Rehberger, and Wang Tuo, creating a dynamic conversation between past and present. The project is unprecedented in Italy and indeed Europe, and is therefore an absolute first amongst exhibitions devoted to the art of the Far East.</p>
+                
             </div>
+        <div class="ap_sect_02">
+            
+        </div>
         <footer>
             <h3>AirHue Program</h3>
             <div class="footer_cont">
@@ -167,8 +259,6 @@
                         Email: airhue.program.vn@gmail.com   </p>
                 </div>
             </div>
-            
-            
         </footer>
     </div>
     
