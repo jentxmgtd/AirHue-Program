@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirHue Program</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+       
+        body {
+            border-radius: 10px;
+            font-family: Libre Franklin, sans-serif;
+            background: linear-gradient(90deg, rgba(59,59,59,1) 0%, rgba(215,215,215,1) 25%, rgba(59,59,59,1) 50%, rgba(215,215,215,1) 75%, rgba(59,59,59,1) 100%);
+            box-sizing: border-box;
+        }
+        .tre{
+            position:fixed;
+            bottom: 0px;
+            height: 50vh;
+            /* width: 15vw; */
+            scale: 120%;
+            filter: blur(0px) saturate(0.6);
+            /* z-index: 4; */
+        }
+        main{
+            margin: 10px;
+            
+        }
+        
+        header {
+            margin:10px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgb(27, 27, 27);
+            background: linear-gradient(0deg, #d70000 0%, rgba(215,215,215,1) 46%, rgba(206,255,171,1) 100%);
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Ensure header is on top */
+            filter: drop-shadow(0 3mm 4mm rgba(0, 0, 0, 0.7));
+        }
+        .logo {
+            width: 50px; /* Adjust the width as necessary */
+        }
+        nav {
+            display: flex;
+            gap: 20px; /* Space between menu items */
+            margin-left: auto; /* Pushes the nav items to the right */
+            filter: drop-shadow(0 2mm 2mm rgba(0, 0, 0, 0.5));
+        }
+        nav a {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: rgb(27, 27, 27);
+            border-radius: 10px;
+            background: linear-gradient(0deg, rgb(199, 255, 195) 0%, rgba(215,215,215,1) 46%, rgb(158, 158, 158) 100%);
+            transition: background 0.3s; /* Smooth transition for hover effect */
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.8); /* Change to a lighter color on hover */
+        }
+        .menu-btn {
+            display: none; /* Hide the menu button by default */
+        }
+    
+        .container{
+            margin: 15% 10% 10% 10%;
+            padding-top: 30px;
+            background-color: white;
+            text-align: center;
+            filter: drop-shadow(0 5mm 3mm rgb(39, 39, 39));
+            width: 80%;
+        }
+
+        footer {
+            background: linear-gradient(0deg, #d70000 0%, rgba(215,215,215,1) 46%, rgba(206,255,171,1) 100%);
+            color: rgb(28, 28, 28);
+            font-size: small;
+            border-radius: 10px 10px 0 0;
+            text-align: left;
+            padding: auto;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 2rem;
+            box-sizing: border-box;
+            filter: drop-shadow(0 -3mm 5mm rgb(0, 0, 0,0.7));
+        }
+        .footer_cont{
+            display:flex;
+            gap: 2rem;
+        }
+        .footer_col_l .footer_col_r{
+            display:flex;
+        }
+        .bottom{
+            margin:0px;
+            height: 3vh;
+            width: 100%;
+            z-index: 5;
+            font-size: small;
+            text-align: center;
+            background: linear-gradient(90deg, rgba(59,59,59,1) 0%, rgba(215,215,215,1) 25%, rgba(59,59,59,1) 50%, rgba(215,215,215,1) 75%, rgba(59,59,59,1) 100%);
+            position: fixed;
+            bottom: 0vh;
+            border-radius: 10px 10px 0 0;
+        }
+        @media (max-width: 600px) {
+            nav {
+                display: none; /* Hide the nav on smaller screens */
+            }
+            .menu-btn {
+                display: inline-block; /* Show menu button on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+<img class="tre" src="images/tre.png">
+<main>
+    <header>
+        <img src="images/airhue_icon_01@4x.png" alt="Art Organization Logo" class="logo"> <!-- Add your logo image here -->
+        <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+        <nav id="nav-menu">
+            <a href="#about">About Us</a>
+            <a href="#events">What's On</a>
+            <a href="#gallery">Artist Profiles</a>
+            <a href="#contact">Donation</a>
+            <a href="#contact">VN</a>
+            <a href="#contact">ENG</a>
+        </nav>
+    </header>
+    <div class="bottom">
+        <p>AirHue 2025 AirHue 2025 AirHue 2025 AirHue 2025</p>
+       </div>
+    <div class="container">
+        <h2>Welcome to AirHue!</h2>
+        <p></p>
+        <div style="height: 200vh;"> <!-- Added height for scroll demonstration -->
+            <p>Scroll down to see more content...</p>
+        </div>
+        <footer>
+            <h3>AirHue Program</h3>
+            <div class="footer_cont">
+                <div class="footer_col_l">
+                    <p>
+                        4/15 Nguyễn Hữu Dật, Hương Long, Huế, Việt Nam<br>
+                        Visit by appointment via email.<br>
+                       </p> 
+                </div>
+                <div class="footer_col_r">
+                    <p>Instagram: @Air.hue<br>
+                        Email: airhue.program.vn@gmail.com   </p>
+                </div>
+            </div>
+            
+            
+        </footer>
+    </div>
+    
+</main>
+
+
+
+
+
+<script>
+    function toggleMenu() {
+        const navMenu = document.getElementById('nav-menu');
+</script>
+
+</body>
+</html>
